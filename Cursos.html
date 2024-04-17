@@ -28,6 +28,7 @@
 
 
         .header button {
+            box-shadow: 0px 0px 30px #000000ad;
             border-radius: 4px;
             margin: 5px;
             padding: 10px 20px;
@@ -56,15 +57,17 @@
             background-color: #222831; /* Cambio de color al pasar el cursor */
         }
 
+
         .inner-container2 button {
             border-radius: 4px;
             margin: 5px;
-            padding: 10px 20px;
+            padding: 13px 25px;
             border: none;
             background-color: #09A4AB; /* Color verde */
             color: white;
-            font-size: 16px;
+            font-size: 20px;
             cursor: pointer;
+            box-shadow: 0px 0px 30px #00000069;
         }
         
         .inner-container2 label {
@@ -97,37 +100,32 @@
             background-color: #09A4AB; /* Menta */
         }
         
-.inner-container2 {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 450px; /* Ajusta el ancho máximo del contenedor interno */
-    margin: 0 auto; /* Centra el contenedor interno horizontalmente */
-    margin-top: 40px; /* Espacio entre el contenedor anterior */
-    margin-left: 20px; /* Centra el contenedor en el lado izquierdo */
-    margin-right: auto;
+        .inner-container2 {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 420px; /* Ajusta el ancho máximo del contenedor interno */
+  margin: 0 auto; /* Centra el contenedor interno horizontalmente */
+  margin-top: 30px; /* Espacio entre el contenedor anterior */
+  margin-left: 20px; /* Despega el contenedor de la pared izquierda */
+  margin-right: auto;
+  box-shadow: 0px 0px 30px #ffffffc4;
 }
 
-.avatar {
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
 
-}
+
         .light-black {
             background-color: #222831; /* Negro claro */
             color: white;
         }
         .light-img {
-            background-image: url(fondo.png); /* Ruta a tu imagen de fondo */
-     /* Ajusta la imagen de fondo para que cubra todo el contenedor */
-     /* Centra la imagen de fondo */
-     background-size: cover; /* Evita la repetición de la imagen */
-    width: 1270px; /* Ancho del contenedor */
-    height: 500px;
-    background-repeat: no-repeat; /* Centra la imagen de fondo */
-            
+            /* Ancho del contenedor */
+   /* Altura inicial del contenedor */
+  background-image: url(fondo3.png); /* Ruta de la imagen */
+  background-size: cover; /* La imagen se ajustará para caber dentro del contenedor */
+  background-position: center center; /* La imagen estará centrada dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 175px; /* Puedes añadir más estilos según tus necesidades */    
         }
 
         .footer {
@@ -265,6 +263,7 @@
     text-align: center;
 }
 .circle-image {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.705);
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -285,6 +284,7 @@
 }
 
 .button {
+    box-shadow: 0px 0px 30px #000000c2;
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
@@ -333,6 +333,54 @@ footer {
     height: 30px; /* Tamaño de las imágenes */
     margin-left: 10px; /* Espacio entre las imágenes */
 }
+
+
+
+.fila {
+  display: flex;
+  flex-basis: 48%; /* Para dejar un pequeño espacio entre los contenedores */
+}
+
+.contenedor-pequeno {
+    box-shadow: 0px 0px 30px #000;
+    color: #ffffff;
+    background-color: #1a201f;
+  flex-basis: 100%; /* Tamaño de cada contenedor pequeño */
+  border-radius: 16px; /* Bordes redondeados */
+   /* Borde gris */
+  padding: 10px; /* Espacio interno */
+  margin-bottom: 20px; /* Espacio entre filas */
+  margin-right: 15px; 
+}
+
+.contenedor-pequeno img {
+    border-radius: 16px;
+    /* Para que la imagen se superponga al contenido */
+ width: 100%;
+  /* La imagen ocupa todo el espacio disponible */
+   /* La imagen se ajusta para cubrir todo el contenedor */
+}
+
+.contenedor-pequeno p {
+  margin-bottom: 10px; /* Espacio entre el párrafo y el enlace */
+  
+}
+
+
+.contenedor-pequeno a {
+     /* Color de fondo de los botones y labels */
+    color: white; /* Color del texto de los botones y labels */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    
+}
+.contenedor-pequeno a:hover {
+    color: #16a18f; /* Cambio de color al pasar el cursor */
+}
+        .contenedor-pequeno a:hover {
+            background-color: #393E46; /* Cambio de color al pasar el cursor */
+        }
     </style>
 </head>
 <body>
@@ -355,19 +403,59 @@ footer {
 
     </div>
     <div class="container light-black">
+        <p id="titulo">Cursos Populares</p>
+            <div class="fila">
+              <div class="contenedor-pequeno">
+                <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+              <div class="contenedor-pequeno">
+                <img src="Curso-para-construir-una-startup-300x159.jpg" alt="Imagen 2">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+              <div class="contenedor-pequeno">
+                <img src="imagen3.jpg" alt="Imagen 3">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+              <div class="contenedor-pequeno">
+                <img src="imagen4.jpg" alt="Imagen 4">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+            </div>
+            <div class="fila">
+              <div class="contenedor-pequeno">
+                <img src="imagen5.jpg" alt="Imagen 5">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+              <div class="contenedor-pequeno">
+                <img src="imagen6.jpg" alt="Imagen 6">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+              <div class="contenedor-pequeno">
+                <img src="imagen7.jpg" alt="Imagen 7">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+              <div class="contenedor-pequeno">
+                <img src="imagen8.jpg" alt="Imagen 8">
+                <p>Información breve sobre algo</p>
+                <label><a href="Index.html">Leer más</a></label>
+              </div>
+            </div>
+          
         
-
-
-
-
-
-
     </div>
 
     <div class="container light-black">
         
             
-        <div class="circle-image"></div>
+        
             
         
         
