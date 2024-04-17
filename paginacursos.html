@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitio Web con Contenedores</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -102,15 +103,18 @@
         }
         
         .inner-container2 {
-  background-color: #ffffff;
-  border-radius: 20px;
+            background-color: rgba(26, 32, 31, 0);
+  
   padding: 30px;
-  max-width: 420px; /* Ajusta el ancho máximo del contenedor interno */
-  margin: 0 auto; /* Centra el contenedor interno horizontalmente */
+  max-width: 600px; /* Ajusta el ancho máximo del contenedor interno */
+   /* Centra el contenedor interno horizontalmente */
   margin-top: 30px; /* Espacio entre el contenedor anterior */
-  margin-left: 20px; /* Despega el contenedor de la pared izquierda */
+  margin-left: 0px; /* Despega el contenedor de la pared izquierda */
   margin-right: auto;
-  box-shadow: 0px 0px 30px #ffffffc4;
+  display: inline-block; /* Permite que el texto se ajuste a su contenido */
+   /* Alinear el contenido interno a la izquierda */
+ 
+  
 }
 
 
@@ -122,7 +126,7 @@
         .light-img {
             /* Ancho del contenedor */
    /* Altura inicial del contenedor */
-  background-image: url(fondo3.png); /* Ruta de la imagen */
+  background-image: url(fondo2.png); /* Ruta de la imagen */
   background-size: cover; /* La imagen se ajustará para caber dentro del contenedor */
   background-position: center center; /* La imagen estará centrada dentro del contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -144,21 +148,20 @@
             
         }
         #titulos{
-            margin-left: 20px;
-            font-family: 'Inter Bold', Arial, sans-serif;
-            font-size: 60px;
-            color: rgb(255, 255, 255);
-            text-align: left
-            
-        }
-        #titulosss{
             text-align: center;
             font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 800;
   font-style: normal;
   color: rgb(255, 255, 255);
   font-size: 95px;
-    
+    text-shadow: 0px 0px 30px #000;
+        }
+        #titulosss{
+            font-weight: bold;
+            font-family: 'Inter Bold', Arial, sans-serif;
+            font-size: 51px;
+            color: rgb(0, 0, 0);
+            
         }
         #titulosss{
             margin-top: 30px;
@@ -397,16 +400,15 @@ footer {
     </div>
     
     <div class="container light-img">
-        
         <div class="inner-container2">
-            <p id="titulosss">Explora Nuevos<br>Cursos</p>
-            <p id="subtitulosss">Amplíe sus conocimientos en línea</p>
-            <button id="botoninicio">Comienza a aprender</button>
+            <p id="titulos">Amplía tu <br> conocimiento</p>
+            <p id="subtitulo">Comienza a estudiar!!</p>
+           
         </div>
-
+        
     </div>
     <div class="container light-black">
-        <p id="titulo">Cursos Populares</p>
+        
             <div class="fila">
               <div class="contenedor-pequeno">
                 <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
@@ -470,14 +472,7 @@ footer {
 
 
     <div class="container light-black">
-        <div class="circle-image">
-            
-        </div>
-        <div class="text">
-            <h2 id="titulo">Únete a nuestra comunidad</h2>
-            <p id="subtitulo">Conéctese con los estudiantes y crezcamos juntos.</p>
-            <a href="#" class="button">Únete Hoy!</a>
-        </div>
+        
         
     </div>
     
