@@ -342,30 +342,30 @@ footer {
 
 
 
-.fila {
-  display: flex;
-  flex-basis: 48%; /* Para dejar un pequeño espacio entre los contenedores */
-}
 
+
+/* Estilos para los contenedores de cursos */
 .contenedor-pequeno {
     box-shadow: 0px 0px 30px #000;
     color: #ffffff;
     background-color: #1a201f;
-  flex-basis: 100%; /* Tamaño de cada contenedor pequeño */
-  border-radius: 16px; /* Bordes redondeados */
-   /* Borde gris */
-  padding: 10px; /* Espacio interno */
-  margin-bottom: 20px; /* Espacio entre filas */
-  margin-right: 15px; 
+    flex-basis: calc(25% - 35px); /* Tamaño de cada contenedor pequeño */
+    border-radius: 16px; /* Bordes redondeados */
+    /* Borde gris */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio entre filas */
+    margin-right: 15px; 
+    box-sizing: border-box; /* Incluir el padding en el tamaño total */
+    overflow: hidden; /* Ocultar contenido que se desborde */
 }
 
+/* Estilo para la imagen dentro de los contenedores */
 .contenedor-pequeno img {
-    border-radius: 16px;
-    /* Para que la imagen se superponga al contenido */
- width: 100%;
-  /* La imagen ocupa todo el espacio disponible */
-   /* La imagen se ajusta para cubrir todo el contenedor */
+    width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    height: auto; /* Mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
 }
+
 
 .contenedor-pequeno p {
   margin-bottom: 10px; /* Espacio entre el párrafo y el enlace */
@@ -384,9 +384,32 @@ footer {
 .contenedor-pequeno a:hover {
     color: #16a18f; /* Cambio de color al pasar el cursor */
 }
-        .contenedor-pequeno a:hover {
-            background-color: #393E46; /* Cambio de color al pasar el cursor */
-        }
+
+        
+
+        #searchInput {
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo cuando el input está enfocado */
+#searchInput:focus {
+    border-color: rgb(71, 71, 71);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.589);
+}
+
+.courses-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 60px; /* Ajusta el valor según sea necesario */
+
+}
     </style>
 </head>
 <body>
@@ -402,59 +425,61 @@ footer {
     <div class="container light-img">
         <div class="inner-container2">
             <p id="titulos">Amplía tu <br> conocimiento</p>
-            <p id="subtitulo">Comienza a estudiar!!</p>
+            <input type="text" id="searchInput" placeholder="Buscar cursos...">
            
         </div>
         
     </div>
     <div class="container light-black">
-        
-            <div class="fila">
-              <div class="contenedor-pequeno">
+        <div id="contenedor-pequeno">
+            <div id="coursesContainer" class="courses-wrapper">
+            
+              <div  class="contenedor-pequeno" data-tags="12 meses,ingles">
                 <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
-                <p>Información breve sobre algo</p>
+                <p>curso de ingles en 12 meses</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-              <div class="contenedor-pequeno">
+              <div class="contenedor-pequeno" data-tags="programación,ingles">
                 <img src="Curso-para-construir-una-startup-300x159.jpg" alt="Imagen 2">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-              <div class="contenedor-pequeno">
+              <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen3.jpg" alt="Imagen 3">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-              <div class="contenedor-pequeno">
+              <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen4.jpg" alt="Imagen 4">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-            </div>
-            <div class="fila">
-              <div class="contenedor-pequeno">
+            
+            
+              <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen5.jpg" alt="Imagen 5">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-              <div class="contenedor-pequeno">
+              <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen6.jpg" alt="Imagen 6">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-              <div class="contenedor-pequeno">
+              <div class="contenedor-pequeno" data-tags="programación,ingles">
                 <img src="imagen7.jpg" alt="Imagen 7">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-              <div class="contenedor-pequeno">
-                <img src="imagen8.jpg" alt="Imagen 8">
+              <div class="contenedor-pequeno" data-tags="programación,ingles">
+                <img src="linkedin.png" alt="Imagen 8">
                 <p>Información breve sobre algo</p>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
-            </div>
-          
-        
+            
+          </div>
+        </div>
+        <script src="prueva.js"></script>
     </div>
 
     <div class="container light-black">
@@ -489,6 +514,7 @@ footer {
             <a href="#"><img src="github.png" alt="GitHub" class="social-icon"></a>
         </div>
     </footer>
+    
 </body>
 </html>
 
