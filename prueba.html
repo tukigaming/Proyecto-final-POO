@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso</title>
-    <style>.courseContainer {
-        border: 1px solid #ccc;
-        margin: 10px;
-        padding: 10px;
-    }</style>
+    <title>Document</title>
     
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="tore.js"></script>
+   <script type="module" src="farebase.js"></script>   
+   <script type="module" src="login.js"></script> 
+   <script  src="loginout.js" defer type="module"></script> 
+   <script type="module" src="cambiarbotones.js"></script> 
+
 </head>
 <body>
-    <input type="text" id="searchInput" placeholder="Buscar cursos...">
-    <div id="coursesContainer">
-        <!-- Aquí van los contenedores de los cursos -->
-        <div class="courseContainer" data-tags="programación,java">
-            <h2>Curso de Programación en Java</h2>
-            <p>Descripción del curso...</p>
-        </div>
-        <div class="courseContainer" data-tags="diseño,photoshop">
-            <h2>Curso de Diseño con Photoshop</h2>
-            <p>Descripción del curso...</p>
-        </div>
-        <!-- Añade más contenedores de cursos según sea necesario -->
-    </div>
-<script src="prueva.js"></script>
-    
+    <form>
+        <input type="email" id="email" />
+        <label for="email">Email</label>
+        <br>
+        <input type="password" id="password" />
+        <label for="password">Password</label>
+        <br>
+        // Below is where we'll add the class names and inline default styling
+        <button class="logged-out" style="display: none;" id="signup-btn">Sign Up</button>
+        <button class="logged-out" style="display: none;" id="login-btn">Login</button>
+        <button class="logged-in" style="display: none;" id="logout-btn">Logout</button>
+      </form>
 </body>
+
 </html>

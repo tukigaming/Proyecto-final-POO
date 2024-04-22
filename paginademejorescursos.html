@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio Web con Contenedores</title>
+    <title>CourseCrafters</title>
+    <link rel="icon" href="logo.ico">
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body {
@@ -28,8 +29,9 @@
 }
 
 
-        .header button {
-            box-shadow: 0px 0px 30px #000000ad;
+.header a {
+            text-decoration: none;
+            box-shadow: 0px 0px 30px #000000a2;
             border-radius: 4px;
             margin: 5px;
             padding: 10px 20px;
@@ -38,6 +40,12 @@
             color: white;
             font-size: 16px;
             cursor: pointer;
+        }
+                .header a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
+}
+        .header a:hover {
+            background-color: #222831; /* Cambio de color al pasar el cursor */
         }
         
         .header label {
@@ -51,13 +59,7 @@
 .header label:hover {
     color: #16a18f; /* Cambio de color al pasar el cursor */
 }
-        .header button:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
-        .header button:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
-        }
-
+    
 
         .inner-container2 button {
             border-radius: 4px;
@@ -368,22 +370,79 @@ footer {
   margin-bottom: 10px; /* Espacio entre el párrafo y el enlace */
   
 }
-
-
-.contenedor-pequeno a {
-     /* Color de fondo de los botones y labels */
-    color: white; /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    
+.inner-container2 a {
+            text-decoration: none;
+            box-shadow: 0px 0px 30px #000000a2;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 15px 40px;
+            border: none;
+            background-color: #09A4AB; /* Color verde */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+                .inner-container2 a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
 }
-.contenedor-pequeno a:hover {
-    color: #16a18f; /* Cambio de color al pasar el cursor */
+        .inner-container a:hover {
+            background-color: #222831; /* Cambio de color al pasar el cursor */
+        }
+        .container a {
+            text-decoration: none;
+            box-shadow: 0px 0px 30px #000000a2;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 15px 60px;
+            border: none;
+            background-color: #09A4AB; /* Color verde */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+                .container a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
+}
+        .container a:hover {
+            background-color: #222831; /* Cambio de color al pasar el cursor */
+        }
+
+
+        
+
+        .contenedor-pequeno a {
+            text-decoration: none;
+            box-shadow: 0px 0px 30px #000000a2;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 8px 12px;
+            border: none;
+            background-color: #09A4AB; /* Color verde */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+                .contenedor-pequeno a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
 }
         .contenedor-pequeno a:hover {
-            background-color: #393E46; /* Cambio de color al pasar el cursor */
+            background-color: #222831; /* Cambio de color al pasar el cursor */
         }
+        .btn-like {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url('corazon prueba1.png'); /* Imagen de corazón */
+    background-size: cover;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilo para el botón cuando está "gustado" */
+.btn-like.liked {
+    background-image: url('corazon prueba3.png'); /* Imagen de corazón "gustado" */
+}
     </style>
 </head>
 <body>
@@ -391,8 +450,8 @@ footer {
         
         <label for="">Cursos</label>
         <label for="">Developers</label>
-        <button>Iniciar Sesión</button>
-        <button>Registrarse</button>
+        <a href="paginainiciodesesion.html" class="boton">Iniciar Sesión</a>
+    <a href="paginacrearcuenta.html" class="boton">Registrarse</a>
         
     </div>
     
@@ -400,8 +459,9 @@ footer {
         
         <div class="inner-container2">
             <p id="titulosss">Explora Nuevos<br>Cursos</p>
-            <p id="subtitulosss">Amplíe sus conocimientos en línea</p>
-            <button id="botoninicio">Comienza a aprender</button>
+            <p id="subtitulosss">Amplíe sus conocimientos en línea</p><br><br>
+            <a href="paginacursos.html" class="boton">Comienza a aprender</a>
+   
         </div>
 
     </div>
@@ -411,21 +471,25 @@ footer {
               <div class="contenedor-pequeno">
                 <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno">
                 <img src="Curso-para-construir-una-startup-300x159.jpg" alt="Imagen 2">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno">
                 <img src="imagen3.jpg" alt="Imagen 3">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno">
                 <img src="imagen4.jpg" alt="Imagen 4">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
             </div>
@@ -433,21 +497,25 @@ footer {
               <div class="contenedor-pequeno">
                 <img src="imagen5.jpg" alt="Imagen 5">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno">
                 <img src="imagen6.jpg" alt="Imagen 6">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno">
                 <img src="imagen7.jpg" alt="Imagen 7">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno">
                 <img src="imagen8.jpg" alt="Imagen 8">
                 <p>Información breve sobre algo</p>
+                <button class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
             </div>
@@ -494,6 +562,8 @@ footer {
             <a href="#"><img src="github.png" alt="GitHub" class="social-icon"></a>
         </div>
     </footer>
+    <script src="likear.js"></script>
+        <script src="guardarboton.js"></script>
 </body>
 </html>
 

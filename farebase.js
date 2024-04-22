@@ -13,16 +13,16 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth();
 
 export class ManageAccount {
   register(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((_) => {
-        window.location.href = "signup.html";
+        window.location.href = "paginainiciodesesion.html";
         // Mostrar alerta de registro exitoso
         alert("Registro exitoso. Serás redirigido a la página de inicio de sesión.");
+        
       })
       .catch((error) => {
         console.error(error.message);
@@ -34,23 +34,35 @@ export class ManageAccount {
   authenticate(email, password) {
     signInWithEmailAndPassword(auth, email, password)
       .then((_) => {
-        window.location.href = "Index.html";
+        window.location.href = "paginaprincipal.html";
         // Mostrar alerta de inicio de sesión exitoso
         alert("Has iniciado sesión correctamente. Serás redirigido a la página principal.");
-        window.location.href = "tore.html";
+        window.location.href = "paginaprincipal.html";
+        
       })
       .catch((error) => {
         console.error(error.message);
                 // Mostrar alerta de error de inicio de sesión
-                alert("Error al iniciar sesión: " + error.message);
+                
                 
       });
   }
-
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      loggedInBtns.forEach(link => link.style.display = 'block');
+      loggedOutBtns.forEach(link => link.style.display = 'none');
+  
+      // We can add more functions here to display the data that can be made available to a logged in user
+  
+    } else {
+      loggedInBtns.forEach(link => link.style.display = 'none');
+      loggedOutBtns.forEach(link => link.style.display = 'block');
+    }
+  });
   signOut() {
     signOut(auth)
       .then((_) => {
-        window.location.href = "index.html";
+        window.location.href = "paginainiciodesesion.html";
       })
       .catch((error) => {
         console.error(error.message);

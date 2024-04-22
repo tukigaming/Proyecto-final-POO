@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio Web con Contenedores</title>
+    <title>CourseCrafters</title>
+    <link rel="icon" href="logo.ico">
+    <script></script>
     <style>
        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -29,7 +31,8 @@
 }
 
 
-        .header button {
+        .header a {
+            text-decoration: none;
             box-shadow: 0px 0px 30px #000000ad;
             border-radius: 4px;
             margin: 5px;
@@ -52,10 +55,10 @@
 .header label:hover {
     color: #16a18f; /* Cambio de color al pasar el cursor */
 }
-        .header button:nth-child(2) {
+        .header a:nth-child(2) {
     margin-left: 10px; /* Ajusta el espacio entre los botones */
 }
-        .header button:hover {
+        .header a:hover {
             background-color: #222831; /* Cambio de color al pasar el cursor */
         }
 
@@ -410,6 +413,40 @@ footer {
     margin-left: 60px; /* Ajusta el valor según sea necesario */
 
 }
+.btn-like {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url('corazon prueba1.png'); /* Imagen de corazón */
+    background-size: cover;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilo para el botón cuando está "gustado" */
+.btn-like.liked {
+    background-image: url('corazon prueba3.png'); /* Imagen de corazón "gustado" */
+}
+
+.container a {
+            text-decoration: none;
+            box-shadow: 0px 0px 30px #000000a2;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 8px 12px;
+            border: none;
+            background-color: #09A4AB; /* Color verde */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+                .container a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
+}
+        .container a:hover {
+            background-color: #222831; /* Cambio de color al pasar el cursor */
+        }
     </style>
 </head>
 <body>
@@ -417,8 +454,8 @@ footer {
         
         <label for="">Cursos</label>
         <label for="">Developers</label>
-        <button>Iniciar Sesión</button>
-        <button>Registrarse</button>
+        <a href="paginainiciodesesion.html" class="boton">Iniciar Sesión</a>
+        <a href="paginacrearcuenta.html" class="boton">Registrarse</a>
         
     </div>
     
@@ -430,28 +467,35 @@ footer {
         </div>
         
     </div>
+
     <div class="container light-black">
         <div id="contenedor-pequeno">
             <div id="coursesContainer" class="courses-wrapper">
             
               <div  class="contenedor-pequeno" data-tags="12 meses,ingles">
                 <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
-                <p>curso de ingles en 12 meses</p>
+                <p>curso de ingles en 12 meses</p> 
+                <button id="botonlike" onclick="guardar(),actualizarContador('clicks')" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
+               
+                
               </div>
               <div class="contenedor-pequeno" data-tags="programación,ingles">
                 <img src="Curso-para-construir-una-startup-300x159.jpg" alt="Imagen 2">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador('click(2)')" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen3.jpg" alt="Imagen 3">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador('click(3)')" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen4.jpg" alt="Imagen 4">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador('click(4)')" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
             
@@ -459,27 +503,31 @@ footer {
               <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen5.jpg" alt="Imagen 5">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador('click(5)')" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno" data-tags="programación,java">
                 <img src="imagen6.jpg" alt="Imagen 6">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador('click(6)')" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno" data-tags="programación,ingles">
                 <img src="imagen7.jpg" alt="Imagen 7">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador()" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
               <div class="contenedor-pequeno" data-tags="programación,ingles">
                 <img src="linkedin.png" alt="Imagen 8">
                 <p>Información breve sobre algo</p>
+                <button id="botonlike" onclick="guardar(),actualizarContador()" class="btn-like"></button>
                 <label><a href="Index.html">Leer más</a></label>
               </div>
             
           </div>
         </div>
-        <script src="prueva.js"></script>
+        
     </div>
 
     <div class="container light-black">
@@ -493,14 +541,6 @@ footer {
     
     </div>
 
-
-
-
-    <div class="container light-black">
-        
-        
-    </div>
-    
     <footer>
         <div class="footer-left">
             <img src="2269.png" alt="Calificar" onclick="alert('Por favor, califique del 1 al 10.')">
@@ -514,7 +554,16 @@ footer {
             <a href="#"><img src="github.png" alt="GitHub" class="social-icon"></a>
         </div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="guardarinfo.js"></script>
+    <script src="tore.js"></script>
+    <script src="guardar.js"></script>
     
+        
+    
+    <script src="likear.js"></script>
 </body>
 </html>
 

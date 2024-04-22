@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio Web con Contenedores</title>
+    <title>CourseCrafters</title>
+    <link rel="icon" href="logo.ico">
     <style>
         body {
             margin: 0;
@@ -27,7 +28,8 @@
 }
 
 
-        .header button {
+        .header a {
+            text-decoration: none;
             box-shadow: 0px 0px 30px #000000a2;
             border-radius: 4px;
             margin: 5px;
@@ -38,7 +40,12 @@
             font-size: 16px;
             cursor: pointer;
         }
-        
+                .header a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
+}
+        .header a:hover {
+            background-color: #222831; /* Cambio de color al pasar el cursor */
+        }
         .header label {
      /* Color de fondo de los botones y labels */
     color: white; /* Color del texto de los botones y labels */
@@ -47,15 +54,11 @@
     cursor: pointer;
     
 }
+
 .header label:hover {
     color: #16a18f; /* Cambio de color al pasar el cursor */
 }
-        .header button:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
-        .header button:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
-        }
+
 
         .container {
             padding: 20px;
@@ -131,16 +134,25 @@
             color: rgba(43, 42, 42, 0.726);
             
         }
-        #btncursos{
-            box-shadow: 0px 0px 30px #000000a2;
-            font-family: 'Inter Regular', Arial, sans-serif; 
-    color: rgb(0, 0, 0); /* Color del texto */
-    border: none;
-    border-radius: 20px; /* Bordes redondeados */
-    padding: 15px 80px;
-    cursor: pointer;
-    background-color: #09A4AB;
-    
+        .container  a {
+            text-decoration: none;
+            box-shadow: 0px 0px 30px #0000005e;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 15px 30px;
+            border: none;
+            background-color: #09A4AB; /* Color verde */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            
+        }
+                .container  a:nth-child(2) {
+    margin-left: 10px; /* Ajusta el espacio entre los botones */
+}
+        .container a:hover {
+            background-color: #222831; /* Cambio de color al pasar el cursor */
         }
         #imagenp{
             box-shadow: 0px 0px 30px #000000a2;
@@ -181,6 +193,14 @@
   border-radius: 5px; /* Esquinas redondeadas del campo de entrada */
   box-sizing: border-box;
     }
+    #registrarse{
+        text-decoration: none;
+     /* Color de fondo de los botones y labels */
+    color: #ffffff; /* Color del texto de los botones y labels */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    }
     .register-link span {
     margin-right: 5px;
     color: white; /* Cambia el color del texto a blanco */
@@ -202,6 +222,13 @@
     font-size: 16px;
     
     flex: 1; /* Utiliza todo el espacio restante */
+}
+.objetivo-info{
+    font-weight: bold;
+            font-family: 'Inter Regular', Arial, sans-serif; 
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.726);
+
 }
 .objetivo-numero {
     flex:  0 0 auto; /* Utiliza todo el espacio restante */
@@ -318,14 +345,27 @@ footer {
     margin-left: 10px; /* Espacio entre las imágenes */
 }
     </style>
+     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-compat.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+     <script src="tore.js"></script>
+    <script type="module" src="farebase.js"></script>   
+    <script type="module" src="login.js"></script> 
+    <script  src="loginout.js" defer type="module"></script> 
+    <script type="module" src="cambiarbotones.js"></script> 
 </head>
-<body>
+<body> 
+    
+
+
+
     <div class="header">
         
         <label for="">Cursos</label>
         <label for="">Developers</label>
-        <button>Iniciar Sesión</button>
-        <button>Registrarse</button>
+        <a id="logged-out" href="paginainiciodesesion.html" class="boton">Iniciar Sesión</a>
+    <a id="logged-out" href="paginacrearcuenta.html" class="boton">Registrarse</a>
+    <a id="logged-in" href="#"  class="boton" style="display:none;">Cerrar sesion</a>
         
     </div>
     
@@ -334,30 +374,12 @@ footer {
         <h1 id="titulo">Domina nuevas<br><span>habilidades en línea</span></h1>
         <div class="linea"></div>
     <h2 id="subtitulo">Explora nuevos cursos</h2>
-    <button id="btncursos">Ver Cursos</button>
+    <a href="paginademejorescursos.html" class="boton">Ver Cursos</a><br><br><br><br>
+    
     </div>
-    <div class="container mint">
-        <div class="inner-container">
-            <img src="icono ususario.png" alt="Avatar" class="avatar">
-            <br><label id="iniciarsesion">Iniciar sesion</label>
-            <br><label id="iniciaresion">Unete a nuestra comunidad</label>
-            <div class="linea"></div>
-                <div class="input-container">
-                    <input id="contraseña" type="text" placeholder="Correo electrónico" name="correo" required><br><br>
-                <input id="contraseña" type="password" placeholder="Contraseña" name="contrasena" required>
-                </div>
-                <br>
-                <button id="botoninicio" type="submit">Iniciar sesión</button>
-            </form> 
-            <div class="register-link">
-                <br>
-                <span id="">¿No tienes una cuenta?</span>
-                <a href="signup.html">Registrarse</a>
-            </div>
-        </div>
-    </div>
+    
 
-    <div class="container light-black">
+    <div class="container mint">
         <h1 id="titulos">Nuestros Objetivos</h1><br><br>
         <div class="objetivo">
             <div class="objetivo-numero">1</div><br><br><br><br><br>
@@ -427,6 +449,7 @@ footer {
             <a href="#"><img src="github.png" alt="GitHub" class="social-icon"></a>
         </div>
     </footer>
+    
 </body>
 </html>
 
