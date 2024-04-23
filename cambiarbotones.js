@@ -1,17 +1,23 @@
+// Function to handle the sign-in state
+function verificarSesion() {
+  const idUsuario = localStorage.getItem('userID');
+  if (idUsuario) {
+    // If there is a user ID, change the button text to "Cerrar Sesión"
+    btnInicioSesion.textContent = "Cerrar Sesión";
+    btnInicioSesion.addEventListener('click', cerrarSesion);
+  } else {
+    btnInicioSesion.textContent = "Iniciar Sesión";
+    btnInicioSesion.addEventListener('click', function() {
+      window.location.href = 'paginainiciodesesion.html';
+    });
+  }
+}
 
-const auth = getAuth();
-const loggedOutBtns = document.querySelectorAll('.logged-out');
-const loggedInBtns = document.querySelectorAll('.logged-in');
+// Function to handle logout
+function cerrarSesion() {
+  localStorage.removeItem('userID');
+  verificarSesion(); // Verify session again
+}
 
-getAuth.onAuthStateChanged(user => {
-    if (user) {
-      loggedInBtns.forEach(link => link.style.display = 'block');
-      loggedOutBtns.forEach(link => link.style.display = 'none');
-  
-      // We can add more functions here to display the data that can be made available to a logged in user
-  
-    } else {
-      loggedInBtns.forEach(link => link.style.display = 'none');
-      loggedOutBtns.forEach(link => link.style.display = 'block');
-    }
-  });
+// Verify the session status when the page loads
+verificarSesion();
