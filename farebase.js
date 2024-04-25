@@ -1,6 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+import { doc, setDoc,getFirestore } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyArAosbnSgSQtAENBVgvvY0fnCrU5vk54s",
@@ -14,38 +16,48 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const firestore = getFirestore(app);
 
 export class ManageAccount {
-  register(email, password) {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((_) => {
-        window.location.href = "paginainiciodesesion.html";
-        // Mostrar alerta de registro exitoso
-        alert("Registro exitoso. Serás redirigido a la página de inicio de sesión.");
-        
-      })
-      .catch((error) => {
-        console.error(error.message);
-            // Mostrar alerta de error de registro
-            alert("Error al registrar: " + error.message);
-      });
+  async register(email, password) {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      
+      alert("Registro exitoso. Serás redirigido a la página de inicio de sesión.");
+      window.location.href = "paginainiciodesesion.html";
+    } catch (error) {
+      console.error(error.message);
+      
+      alert("Error al registrar: " + error.message);
+    }
   }
 
-  authenticate(email, password) {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((_) => {
-        window.location.href = "paginaprincipal.html";
-        // Mostrar alerta de inicio de sesión exitoso
-        alert("Has iniciado sesión correctamente. Serás redirigido a la página principal.");
-        window.location.href = "paginaprincipal.html";
-        
-      })
-      .catch((error) => {
-        console.error(error.message);
-                // Mostrar alerta de error de inicio de sesión
-                
-                
-      });
+  async authenticate(email, password) {
+      const credenciales = await signInWithEmailAndPassword(auth, email, password);
+      console.log("Inicio de sesión exitoso:", credenciales);
+      
+       
+
+      const uid = credenciales.user.uid;
+
+      
+
+      const nuevoDocRef = doc(firestore, 'usuarios', uid ,'contador');
+      const datos = {
+        email: email,
+        ID:uid,
+      };
+      await setDoc(subcoleccionRef, datos);
+     const subcoleccionRef = collection(nuevoDocRef, 'clicks');
+
+     
+
+      await setDoc(nuevoDocRef, datos);
+      console.log("Datos guardados correctamente:", nuevoDocRef.id);
+  
+      localStorage.setItem('userID', uid);
+      window.location.href = "./paginaprincipal.html"
+    
   }
 
   signOut() {
@@ -55,7 +67,6 @@ export class ManageAccount {
       })
       .catch((error) => {
         console.error(error.message);
-      });
-  }
-  
+      });
+  }
 }

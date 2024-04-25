@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("Datos guardados correctamente:", nuevoDocRef.id);
           localStorage.setItem('userID', uid);
           showMessage("¡Bienvenido, " + credenciales.user.email + "!");
-          window.location.href = 'perfilusuario.html';
+          window.location.href = '.html';
         } catch (error) {
           if (error.code === 'auth/email-already-in-use') {
             showMessage("El correo electrónico ya está en uso", "error")

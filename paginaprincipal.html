@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +14,45 @@
         }
 
         .header {
-    overflow: hidden;
-    background-color: #222831;
-    padding: 15px;
-    display: flex;
-    justify-content: flex-end; /* Alinea los elementos secundarios a la derecha */
-    align-items: center;
-    color: white; /* Color del texto */
-    background-image: url(MsjRFgsOTzK9i1_5GpHsKQ.png); /* Ruta a tu imagen de logo */
-    background-size: 90px 90px; /* Tamaño de la imagen */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: left center; /* Posiciona la imagen a la derecha y centrada verticalmente */ 
-    
-}
+            overflow: hidden;
+            background-color: #222831;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            /* Alinea los elementos secundarios a la derecha */
+            align-items: center;
+            color: white;
+            /* Color del texto */
+            background-image: url(MsjRFgsOTzK9i1_5GpHsKQ.png);
+            /* Ruta a tu imagen de logo */
+            background-size: 90px 90px;
+            /* Tamaño de la imagen */
+            background-repeat: no-repeat;
+            /* Evita la repetición de la imagen */
+            background-position: left center;
+            /* Posiciona la imagen a la derecha y centrada verticalmente */
 
+        }
+
+        .header a {
+            text-decoration: none;
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 5px 1px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .header a:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .header label {
+            margin: 0 10px;
+        }
 
         .header button {
             text-decoration: none;
@@ -35,29 +61,37 @@
             margin: 5px;
             padding: 10px 20px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-                .header button:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
-        .header button:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
-        }
-        .header label {
-     /* Color de fondo de los botones y labels */
-    color: white; /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    
-}
 
-.header label:hover {
-    color: #16a18f; /* Cambio de color al pasar el cursor */
-}
+        .header button:nth-child(2) {
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
+        }
+
+        .header button:hover {
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .header label {
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .header label:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
 
 
         .container {
@@ -66,29 +100,35 @@
         }
 
         .mint {
-            
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-            background-color: #09A4AB; /* Menta */
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #09A4AB;
+            /* Menta */
         }
+
         .inner-container {
-    background-color: #222831;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 400px; /* Ajusta el ancho máximo del contenedor interno */
-    margin: 0 auto; /* Centra el contenedor interno horizontalmente */
-}
+            background-color: #222831;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            /* Ajusta el ancho máximo del contenedor interno */
+            margin: 0 auto;
+            /* Centra el contenedor interno horizontalmente */
+        }
 
-.avatar {
-    box-shadow: 0px 0px 20px #000000a2;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
+        .avatar {
+            box-shadow: 0px 0px 20px #000000a2;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            margin-bottom: 20px;
 
-}
+        }
+
         .light-black {
-            background-color: #222831; /* Negro claro */
+            background-color: #222831;
+            /* Negro claro */
             color: white;
         }
 
@@ -96,287 +136,365 @@
             background-color: #222831;
             padding: 20px;
             text-align: center;
-            float: down; /* Hace que el contenedor flote a la izquierda */
-  
+            float: down;
+            /* Hace que el contenedor flote a la izquierda */
+
         }
-        
-        #titulo{
+
+        #titulo {
             font-family: 'Inter Bold', Arial, sans-serif;
             font-size: 67px;
             color: rgb(255, 255, 255);
-            
+
         }
-        #tituloss{
+
+        #tituloss {
             font-weight: bold;
             font-family: 'Inter Bold', Arial, sans-serif;
             font-size: 51px;
             color: rgb(0, 0, 0);
-            
+
         }
-        #titulos{
+
+        #titulos {
             margin-left: 20px;
             font-family: 'Inter Bold', Arial, sans-serif;
             font-size: 60px;
             color: rgb(255, 255, 255);
             text-align: left
-            
         }
-        #subtitulo{
-            font-family: 'Inter Regular', Arial, sans-serif; 
+
+        #subtitulo {
+            font-family: 'Inter Regular', Arial, sans-serif;
             font-size: 22px;
             color: rgba(230, 230, 230, 0.808);
-            
+
         }
-        #subtituloss{
+
+        #subtituloss {
             font-weight: bold;
-            font-family: 'Inter Regular', Arial, sans-serif; 
+            font-family: 'Inter Regular', Arial, sans-serif;
             font-size: 30px;
             color: rgba(43, 42, 42, 0.726);
-            
+
         }
-        .container  a {
+
+        .container a {
             text-decoration: none;
             box-shadow: 0px 0px 30px #0000005e;
             border-radius: 4px;
             margin: 5px;
             padding: 15px 30px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
             margin-top: 30px;
-            
+
         }
-                .container  a:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
+
+        .container a:nth-child(2) {
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
+        }
+
         .container a:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
         }
-        #imagenp{
+
+        #imagenp {
             box-shadow: 0px 0px 30px #000000a2;
-            border-radius: 10px; /* Bordes redondeados para la imagen */
-    max-width: 90%; /* Mantener el ancho máximo de la imagen */
-    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la relación de aspecto */
-    max-height: 70vh;/* Establecer la altura de la imagen en 150 píxeles */
+            border-radius: 10px;
+            /* Bordes redondeados para la imagen */
+            max-width: 90%;
+            /* Mantener el ancho máximo de la imagen */
+            height: auto;
+            /* Permitir que la altura se ajuste automáticamente para mantener la relación de aspecto */
+            max-height: 70vh;
+            /* Establecer la altura de la imagen en 150 píxeles */
         }
-      #iniciarsesion{
-        
-        color: rgb(250, 250, 250);
-        font-family: 'Inter Bold', Arial, sans-serif;
-    font-size: 45px;
-    font-weight: bold;
-      }
-      #iniciaresion{
-        color: rgba(255, 255, 255, 0.699);
-        font-family: 'Inter Bold', Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-      }
-      #botoninicio{
-        box-shadow: 0px 0px 30px #000000a2;
-        border-radius: 4px;
+
+        #iniciarsesion {
+
+            color: rgb(250, 250, 250);
+            font-family: 'Inter Bold', Arial, sans-serif;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        #iniciaresion {
+            color: rgba(255, 255, 255, 0.699);
+            font-family: 'Inter Bold', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #botoninicio {
+            box-shadow: 0px 0px 30px #000000a2;
+            border-radius: 4px;
             margin: 5px;
             padding: 10px 30px;
             border: none;
-            background-color: #078b92; /* Color verde */
+            background-color: #078b92;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
-      }
-    #contraseña{
-        box-shadow: 0px 0px 30px #000000a2;
-        width: calc(100% - 120px); /* Ancho del campo de entrada menos el ancho del borde y el relleno */
-  padding: 13px; /* Relleno del campo de entrada */
-  border: 1px solid #ccc; /* Borde del campo de entrada */
-  border-radius: 5px; /* Esquinas redondeadas del campo de entrada */
-  box-sizing: border-box;
-    }
-    #registrarse{
-        text-decoration: none;
-     /* Color de fondo de los botones y labels */
-    color: #ffffff; /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    }
-    .register-link span {
-    margin-right: 5px;
-    color: white; /* Cambia el color del texto a blanco */
-}
-.register-link a {
-    color: gray; /* Cambia el color del texto a gris */
-}
-.register-link label {
-    color: white; /* Cambia el color del texto a blanco */
-}
-.objetivo {
-    display: flex; /* Hace que los elementos estén en línea */
-    margin-bottom: 20px;
-    text-align: left;
-}
+        }
 
-.objetivo-info {
-    margin-left: 50px;
-    font-size: 16px;
-    
-    flex: 1; /* Utiliza todo el espacio restante */
-}
-.objetivo-info{
-    font-weight: bold;
-            font-family: 'Inter Regular', Arial, sans-serif; 
+        #contraseña {
+            box-shadow: 0px 0px 30px #000000a2;
+            width: calc(100% - 120px);
+            /* Ancho del campo de entrada menos el ancho del borde y el relleno */
+            padding: 13px;
+            /* Relleno del campo de entrada */
+            border: 1px solid #ccc;
+            /* Borde del campo de entrada */
+            border-radius: 5px;
+            /* Esquinas redondeadas del campo de entrada */
+            box-sizing: border-box;
+        }
+
+        #registrarse {
+            text-decoration: none;
+            /* Color de fondo de los botones y labels */
+            color: #ffffff;
+            /* Color del texto de los botones y labels */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .register-link span {
+            margin-right: 5px;
+            color: white;
+            /* Cambia el color del texto a blanco */
+        }
+
+        .register-link a {
+            color: gray;
+            /* Cambia el color del texto a gris */
+        }
+
+        .register-link label {
+            color: white;
+            /* Cambia el color del texto a blanco */
+        }
+
+        .objetivo {
+            display: flex;
+            /* Hace que los elementos estén en línea */
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .objetivo-info {
+            margin-left: 50px;
+            font-size: 16px;
+
+            flex: 1;
+            /* Utiliza todo el espacio restante */
+        }
+
+        .objetivo-info {
+            font-weight: bold;
+            font-family: 'Inter Regular', Arial, sans-serif;
             font-size: 20px;
             color: rgba(0, 0, 0, 0.726);
 
-}
-.objetivo-numero {
-    flex:  0 0 auto; /* Utiliza todo el espacio restante */
-    margin-left: 200px; /* Despega el texto de la parte derecha 20 píxeles */
-    font-weight: bold; /* Texto en negrita */
-    color: #fff;
-    font-size: 60px;
-    text-align: left;
-    line-height: 50px; /* Alinea verticalmente el número de objetivo */
-    display: flex;
-    margin-bottom: 80px;
-}
-.linea {
-    position: relative; /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
-    margin: 20px 0; /* Margen de 20 píxeles arriba y abajo para separar la línea de los elementos adyacentes */
-    height: 1px; /* Grosor de la línea */
-    background-color: #cccccc00; /* Color de la línea */
-    overflow: hidden; /* Oculta el contenido que exceda el tamaño del contenedor */
-}
+        }
 
-.linea::after {
-    content: ''; /* Contenido del pseudo-elemento, en este caso, una línea */
-    position: absolute; /* Establece la posición absoluta para que se posicione con respecto al elemento padre */
-    top: 0; /* Posiciona el pseudo-elemento en la parte superior del contenedor */
-    left: 50%; /* Posiciona el pseudo-elemento en el centro horizontal */
-    transform: translateX(-50%); /* Centra el pseudo-elemento horizontalmente */
-    width: 80%; /* Anchura del pseudo-elemento, igual al 100% del contenedor */
-    height: 1px; /* Grosor de la línea */
-    background-color: #ffffff; /* Color de la línea */
-}
-.content {
-    text-align: center;
-}
-.circle-image {
-    box-shadow: 0px 0px 30px #000000a2;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    display: flex;
-    margin-left: auto; /* Centra el contenedor en el lado izquierdo */
-    margin-right: auto;  /* Centra verticalmente */
-    /* Agrega tu imagen como fondo */
-    background-image: url(comunidad-virtual.png); /* Ruta a tu imagen */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área */
-    background-position: right; /* Centra la imagen dentro del contenedor */
-    
+        .objetivo-numero {
+            flex: 0 0 auto;
+            /* Utiliza todo el espacio restante */
+            margin-left: 200px;
+            /* Despega el texto de la parte derecha 20 píxeles */
+            font-weight: bold;
+            /* Texto en negrita */
+            color: #fff;
+            font-size: 60px;
+            text-align: left;
+            line-height: 50px;
+            /* Alinea verticalmente el número de objetivo */
+            display: flex;
+            margin-bottom: 80px;
+        }
 
-}
+        .linea {
+            position: relative;
+            /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
+            margin: 20px 0;
+            /* Margen de 20 píxeles arriba y abajo para separar la línea de los elementos adyacentes */
+            height: 1px;
+            /* Grosor de la línea */
+            background-color: #cccccc00;
+            /* Color de la línea */
+            overflow: hidden;
+            /* Oculta el contenido que exceda el tamaño del contenedor */
+        }
+
+        .linea::after {
+            content: '';
+            /* Contenido del pseudo-elemento, en este caso, una línea */
+            position: absolute;
+            /* Establece la posición absoluta para que se posicione con respecto al elemento padre */
+            top: 0;
+            /* Posiciona el pseudo-elemento en la parte superior del contenedor */
+            left: 50%;
+            /* Posiciona el pseudo-elemento en el centro horizontal */
+            transform: translateX(-50%);
+            /* Centra el pseudo-elemento horizontalmente */
+            width: 80%;
+            /* Anchura del pseudo-elemento, igual al 100% del contenedor */
+            height: 1px;
+            /* Grosor de la línea */
+            background-color: #ffffff;
+            /* Color de la línea */
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .circle-image {
+            box-shadow: 0px 0px 30px #000000a2;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            margin-left: auto;
+            /* Centra el contenedor en el lado izquierdo */
+            margin-right: auto;
+            /* Centra verticalmente */
+            /* Agrega tu imagen como fondo */
+            background-image: url(comunidad-virtual.png);
+            /* Ruta a tu imagen */
+            background-size: cover;
+            /* Ajusta el tamaño de la imagen para cubrir el área */
+            background-position: right;
+            /* Centra la imagen dentro del contenedor */
 
 
-.text {
-    margin-top: 20px;
-}
+        }
 
-.button {
-    box-shadow: 0px 0px 30px #000000a2;
-    font-weight: bold;
-    font-size: 20px;
-    display: inline-block;
-    padding: 10px 50px;
-    background-color: #008A90;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-.rectangular-container {
-    
-    background-color: white;
-    width: 50%; /* Anchura del contenedor rectangular */
-    padding: 15px;
-    color: #222831;
-    text-align: center;
-    border-radius: 40px; /* Bordes redondeados */
-    margin-top: 40px; /* Espacio entre el contenedor anterior */
-    margin-left: auto; /* Centra el contenedor en el lado izquierdo */
-    margin-right: auto; /* Centra el contenedor en el lado derecho */
-}
-footer {
-    background-color: #222831;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .text {
+            margin-top: 20px;
+        }
 
-.footer-left img {
-    width: 50px;
-    cursor: pointer;
-}
+        .button {
+            box-shadow: 0px 0px 30px #000000a2;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            padding: 10px 50px;
+            background-color: #008A90;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
-.footer-center label {
-    margin: 0 10px;
-}
-.footer-center a {
-    text-decoration: none;
-     /* Color de fondo de los botones y labels */
-    color: rgb(0, 0, 0); /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+        .rectangular-container {
 
-}
-.footer-center a:hover {
-    color: #16a18f; /* Cambio de color al pasar el cursor */
-}
-.footer-right img {
-    width: 30px;
-    margin-left: 10px;
-}
-.social-icon {
-    width: 30px; /* Tamaño de las imágenes */
-    height: 30px; /* Tamaño de las imágenes */
-    margin-left: 10px; /* Espacio entre las imágenes */
-}
+            background-color: white;
+            width: 50%;
+            /* Anchura del contenedor rectangular */
+            padding: 15px;
+            color: #222831;
+            text-align: center;
+            border-radius: 40px;
+            /* Bordes redondeados */
+            margin-top: 40px;
+            /* Espacio entre el contenedor anterior */
+            margin-left: auto;
+            /* Centra el contenedor en el lado izquierdo */
+            margin-right: auto;
+            /* Centra el contenedor en el lado derecho */
+        }
+
+        footer {
+            background-color: #222831;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left img {
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .footer-center label {
+            margin: 0 10px;
+        }
+
+        .footer-center a {
+            text-decoration: none;
+            /* Color de fondo de los botones y labels */
+            color: rgb(0, 0, 0);
+            /* Color del texto de los botones y labels */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .footer-center a:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .footer-right img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .social-icon {
+            width: 30px;
+            /* Tamaño de las imágenes */
+            height: 30px;
+            /* Tamaño de las imágenes */
+            margin-left: 10px;
+            /* Espacio entre las imágenes */
+        }
     </style>
-     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-compat.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-     <script src="tore.js"></script>
-    <script type="module" src="farebase.js"></script>   
-    <script type="module" src="login.js"></script> 
-    <script  src="loginout.js" defer type="module"></script> 
-    <script type="module" src="cambiarbotones.js"></script> 
-    <script type="module" src="btnlogaut.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="tore.js"></script>
+    <script type="module" src="farebase.js"></script>
+    <script type="module" src="login.js"></script>
+    <script src="loginout.js" defer type="module"></script>
+    <script type="module" src="cambiarbotones.js"></script>
+    <script type="module" src="btnlogaut.js"></script>
 </head>
-<body> 
-    
+
+<body>
+
 
 
 
     <div class="header">
-        
-        <label for="">Cursos</label>
-        <label for="">Developers</label>
+
+        <label><a href="comofunciona.html">Como Funciona</a></label>
+        <label><a href="https://www.linkedin.com/in/axel-geronimo-833898244/">Developer</a></label>
         <button id="btnInicioSesion"></button>
-        
+
     </div>
-    
+
     <div class="container light-black">
         <img id="imagenp" src="KLFpJoYCR1yCHk31m5iMCA.png" alt="Imagen rectangular con bordes redondeados"><br><br>
         <h1 id="titulo">Domina nuevas<br><span>habilidades en línea</span></h1>
         <div class="linea"></div>
-    <h2 id="subtitulo">Explora nuevos cursos</h2>
-    <a href="paginademejorescursos.html" class="boton">Ver Cursos</a><br><br><br><br>
-    
+        <h2 id="subtitulo">Explora nuevos cursos</h2>
+        <a href="paginademejorescursos.html" class="boton">Ver Cursos</a><br><br><br><br>
+
     </div>
-    
+
 
     <div class="container mint">
         <h1 id="titulos">Nuestros Objetivos</h1><br><br>
@@ -384,9 +502,9 @@ footer {
             <div class="objetivo-numero">1</div><br><br><br><br><br>
             <div class="objetivo-info">
                 <p>Ampliar el acceso a la educación: Proporcionar una amplia variedad<br>
-                     de cursos gratuitos en línea para que personas de todas las<br>
-                      regiones y niveles socioeconómicos puedan acceder a la educación<br>
-                       y desarrollar sus habilidades.</p>
+                    de cursos gratuitos en línea para que personas de todas las<br>
+                    regiones y niveles socioeconómicos puedan acceder a la educación<br>
+                    y desarrollar sus habilidades.</p>
             </div>
         </div>
         <div class="linea"></div>
@@ -394,24 +512,24 @@ footer {
         <div class="objetivo">
             <div class="objetivo-numero">2</div><br><br><br><br>
             <div class="objetivo-info">
-                
+
                 <p>Fomentar el aprendizaje continuo: Incentivar a los usuarios a participar en<br>
-                     cursos gratuitos como una forma de promover el aprendizaje continuo y el <br>
-                     desarrollo personal y profesional a lo largo de sus vidas.</p>
+                    cursos gratuitos como una forma de promover el aprendizaje continuo y el <br>
+                    desarrollo personal y profesional a lo largo de sus vidas.</p>
             </div><br>
-            
+
         </div>
         <div class="linea"></div>
         <div class="objetivo">
             <div class="objetivo-numero">3</div><br><br>
             <div class="objetivo-info">
-                
+
                 <p>Apoyar a comunidades marginadas: Dirigir programas y recursos especiales<br>
-                     hacia comunidades marginadas o desfavorecidas, con el objetivo de brindar<br>
-                      oportunidades educativas equitativas y ayudar a cerrar la brecha digital y <br>
-                      educativa.</p>
+                    hacia comunidades marginadas o desfavorecidas, con el objetivo de brindar<br>
+                    oportunidades educativas equitativas y ayudar a cerrar la brecha digital y <br>
+                    educativa.</p>
             </div>
-            
+
         </div>
         <div class="linea"></div>
 
@@ -420,35 +538,35 @@ footer {
 
     <div class="container light-black">
         <div class="circle-image">
-            
+
         </div>
         <div class="text">
             <h2 id="titulo">Únete a nuestra comunidad</h2>
             <p id="subtitulo">Conéctese con los estudiantes y crezcamos juntos.</p>
-            <a href="#" class="button">Únete Hoy!</a>
+            <a href="https://chat.whatsapp.com/LFmMqWWwi5R4hz0UGXzWUs" class="button">Únete Hoy!</a>
         </div>
         <div class="rectangular-container">
             <p id="tituloss">¡Empieza a aprender hoy!</p>
             <p id="subtituloss">Expande Tus Horizontes</p>
-            
+
         </div>
-        
+
     </div>
-    
+
     <footer>
         <div class="footer-left">
             <img src="2269.png" alt="Calificar" onclick="alert('Por favor, califique del 1 al 10.')">
         </div>
         <div class="footer-center">
-            <label><a href="Index.html">Como Funciona</a></label>
-            <label><a href="Index.html">Developers</a></label>
+            <label><a href="comofunciona.html">Como Funciona</a></label>
+            <label><a href="https://www.linkedin.com/in/axel-geronimo-833898244/">Developers</a></label>
         </div>
         <div class="footer-right">
             <a href="#"><img src="linkedin.png" alt="LinkedIn" class="social-icon"></a>
             <a href="#"><img src="github.png" alt="GitHub" class="social-icon"></a>
         </div>
     </footer>
-    
-</body>
-</html>
 
+</body>
+
+</html>

@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CourseCrafters</title>
     <link rel="icon" href="logo.ico">
     <style>
         body {
-            background-color: #03686d; /* Color de fondo menta */
-    font-family: Arial, sans-serif; /* Fuente predeterminada */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+            background-color: #03686d;
+            /* Color de fondo menta */
+            font-family: Arial, sans-serif;
+            /* Fuente predeterminada */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        
+
         .form-container {
-            background-color: #fff; /* Color de fondo del contenedor */
-    border-radius: 4px; /* Borde redondeado */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 20px;
-    width: 400px; /* Ancho deseado del contenedor */
-  height: 500px;
+            background-color: #fff;
+            /* Color de fondo del contenedor */
+            border-radius: 4px;
+            /* Borde redondeado */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Sombra */
+            padding: 20px;
+            width: 400px;
+            /* Ancho deseado del contenedor */
+            height: 500px;
         }
-        
+
         .form-container h2 {
             margin-bottom: 20px;
             text-align: center;
         }
-        
+
         .form-container form {
             display: flex;
             flex-direction: column;
         }
-        
+
         .form-container input {
             box-shadow: 0px 0px 10px #3a3a3a65;
             padding: 10px;
@@ -44,7 +51,7 @@
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-        
+
         .form-container button {
             box-shadow: 0px 0px 30px #000000a2;
             padding: 10px;
@@ -54,74 +61,92 @@
             border-radius: 3px;
             cursor: pointer;
         }
-        
+
         .form-container button:hover {
             background-color: #0056b3;
         }
-        
+
         .create-account {
-            
+
             text-align: center;
             margin-top: 20px;
         }
-        
+
         .create-account a {
             color: #007bff;
             text-decoration: none;
         }
-        #Registrarse{
+
+        #Registrarse {
             box-shadow: 0px 0px 20px #1d1919a2;
             display: block;
-      width: 100%; /* Ancho del botón al 100% del contenedor */
-      padding: 13px; /* Relleno del botón */
-      background-color: #008A90; /* Color de fondo del botón */
-      color: white; /* Color del texto del botón */
-      border: none; /* Quita el borde del botón */
-      border-radius: 5px; /* Esquinas redondeadas del botón */
-      cursor: pointer;
+            width: 100%;
+            /* Ancho del botón al 100% del contenedor */
+            padding: 13px;
+            /* Relleno del botón */
+            background-color: #008A90;
+            /* Color de fondo del botón */
+            color: white;
+            /* Color del texto del botón */
+            border: none;
+            /* Quita el borde del botón */
+            border-radius: 5px;
+            /* Esquinas redondeadas del botón */
+            cursor: pointer;
         }
-        #labels{font-family: "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: bold;}
-    #crear{font-family: "Arial", sans-serif;
-    font-size: 48px;
-    font-weight: 900; 
 
-  color: rgb(0, 0, 0);}
-  #imagen {
-    box-shadow: 0px 0px 30px #000000a2;
-    border-radius: 4px;
-    width: 440px; /* Ancho deseado del contenedor */
-  height: 540px; /* Altura del contenedor */
-  
-  float: left; /* Hace que el contenedor flote a la izquierda */
-  
-  
-}
+        #labels {
+            font-family: "Arial", sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
+        #crear {
+            font-family: "Arial", sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+
+            color: rgb(0, 0, 0);
+        }
+
+        #imagen {
+            box-shadow: 0px 0px 30px #000000a2;
+            border-radius: 4px;
+            width: 440px;
+            /* Ancho deseado del contenedor */
+            height: 540px;
+            /* Altura del contenedor */
+
+            float: left;
+            /* Hace que el contenedor flote a la izquierda */
+
+
+        }
     </style>
-    <script type="module" src="farebase.js"></script>   
-    <script type="module" src="crearcuenta.js"></script> 
+    <script type="module" src="farebase.js"></script>
+    <script type="module" src="crearcuenta.js"></script>
 </head>
+
 <body>
 
-<img  id="imagen" src="cuMupBqPQkGltBatZUtVVw.png" alt="Imagen">    
+    <img id="imagen" src="cuMupBqPQkGltBatZUtVVw.png" alt="Imagen">
 
-<div class="form-container">
-    <h1 id="crear">Crear cuenta</h1>
-    <form id="formulario-crear">
-        <label id="labels" for="email">Correo electrónico:</label>
-		<input type="email" id="email" name="email"><br><br>
-        <label id="labels" for="password">Contraseña:</label>
-		<input type="password" id="password" name="password"><br><br>
-    <input id="Registrarse" type="submit"  value="Registrarse">
-    </form>
-    <div class="create-account">
-        <p> ¿Ya tienes una cuenta? <a href="paginainiciodesesion.html">  Iniciar sesion  </a></p>
+    <div class="form-container">
+        <h1 id="crear">Crear cuenta</h1>
+        <form id="formulario-crear">
+            <label id="labels" for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label id="labels" for="password">Contraseña:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input id="Registrarse" type="submit" value="Registrarse">
+        </form>
+        <div class="create-account">
+            <p> ¿Ya tienes una cuenta? <a href="paginainiciodesesion.html"> Iniciar sesion </a></p>
+        </div>
+
     </div>
-    
-</div>
 
 
 </body>
+
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CourseCrafters</title>
     <link rel="icon" href="logo.ico">
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -14,81 +16,103 @@
         }
 
         .header {
-    overflow: hidden;
-    background-color: #222831;
-    padding: 15px;
-    display: flex;
-    justify-content: flex-end; /* Alinea los elementos secundarios a la derecha */
-    align-items: center;
-    color: white; /* Color del texto */
-    background-image: url(MsjRFgsOTzK9i1_5GpHsKQ.png); /* Ruta a tu imagen de logo */
-    background-size: 90px 90px; /* Tamaño de la imagen */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: left center; /* Posiciona la imagen a la derecha y centrada verticalmente */ 
-    
-}
+            overflow: hidden;
+            background-color: #222831;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            /* Alinea los elementos secundarios a la derecha */
+            align-items: center;
+            color: white;
+            /* Color del texto */
+            background-image: url(MsjRFgsOTzK9i1_5GpHsKQ.png);
+            /* Ruta a tu imagen de logo */
+            background-size: 90px 90px;
+            /* Tamaño de la imagen */
+            background-repeat: no-repeat;
+            /* Evita la repetición de la imagen */
+            background-position: left center;
+            /* Posiciona la imagen a la derecha y centrada verticalmente */
+
+        }
 
 
-.header a {
+        .header button {
             text-decoration: none;
             box-shadow: 0px 0px 30px #000000a2;
             border-radius: 4px;
             margin: 5px;
             padding: 10px 20px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-                .header a:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
-        .header a:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
+
+        .header button:nth-child(2) {
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
         }
-        
+
+        .header button:hover {
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
+        }
+
         .header label {
-     /* Color de fondo de los botones y labels */
-    color: white; /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    
-}
-.header label:hover {
-    color: #16a18f; /* Cambio de color al pasar el cursor */
-}
-    
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .header label:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
 
         .inner-container2 button {
             border-radius: 4px;
             margin: 5px;
             padding: 13px 25px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 20px;
             cursor: pointer;
             box-shadow: 0px 0px 30px #00000069;
         }
-        
+
         .inner-container2 label {
-     /* Color de fondo de los botones y labels */
-    color: white; /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    
-}
-.inner-container2 label:hover {
-    color: #16a18f; /* Cambio de color al pasar el cursor */
-}
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .inner-container2 label:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
         .inner-container2 button:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
+        }
+
         .inner-container2 button:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
         }
 
         .container {
@@ -97,72 +121,95 @@
         }
 
         .mint {
-            
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-            background-color: #09A4AB; /* Menta */
-        }
-        
-        .inner-container2 {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 420px; /* Ajusta el ancho máximo del contenedor interno */
-  margin: 0 auto; /* Centra el contenedor interno horizontalmente */
-  margin-top: 30px; /* Espacio entre el contenedor anterior */
-  margin-left: 20px; /* Despega el contenedor de la pared izquierda */
-  margin-right: auto;
-  box-shadow: 0px 0px 30px #ffffffc4;
-}
 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #09A4AB;
+            /* Menta */
+        }
+
+        .inner-container2 {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 420px;
+            /* Ajusta el ancho máximo del contenedor interno */
+            margin: 0 auto;
+            /* Centra el contenedor interno horizontalmente */
+            margin-top: 30px;
+            /* Espacio entre el contenedor anterior */
+            margin-left: 20px;
+            /* Despega el contenedor de la pared izquierda */
+            margin-right: auto;
+            box-shadow: 0px 0px 30px #ffffffc4;
+        }
+
+        .courses-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: 60px;
+            /* Ajusta el valor según sea necesario */
+
+        }
 
 
         .light-black {
-            background-color: #222831; /* Negro claro */
+            background-color: #222831;
+            /* Negro claro */
             color: white;
         }
+
         .light-img {
             /* Ancho del contenedor */
-   /* Altura inicial del contenedor */
-  background-image: url(fondo3.png); /* Ruta de la imagen */
-  background-size: cover; /* La imagen se ajustará para caber dentro del contenedor */
-  background-position: center center; /* La imagen estará centrada dentro del contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  padding: 175px; /* Puedes añadir más estilos según tus necesidades */    
+            /* Altura inicial del contenedor */
+            background-image: url(fondo3.png);
+            /* Ruta de la imagen */
+            background-size: cover;
+            /* La imagen se ajustará para caber dentro del contenedor */
+            background-position: center center;
+            /* La imagen estará centrada dentro del contenedor */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            padding: 175px;
+            /* Puedes añadir más estilos según tus necesidades */
         }
 
         .footer {
             background-color: #222831;
             padding: 20px;
             text-align: center;
-            float: down; /* Hace que el contenedor flote a la izquierda */
-  
+            float: down;
+            /* Hace que el contenedor flote a la izquierda */
+
         }
-        
-        #titulo{
+
+        #titulo {
             font-family: 'Inter Bold', Arial, sans-serif;
             font-size: 67px;
             color: rgb(255, 255, 255);
-            
+
         }
-        #titulos{
+
+        #titulos {
             margin-left: 20px;
             font-family: 'Inter Bold', Arial, sans-serif;
             font-size: 60px;
             color: rgb(255, 255, 255);
             text-align: left
-            
         }
-        #titulosss{
+
+        #titulosss {
             text-align: center;
             font-family: "Be Vietnam Pro", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  color: rgb(255, 255, 255);
-  font-size: 95px;
-    
+            font-weight: 800;
+            font-style: normal;
+            color: rgb(255, 255, 255);
+            font-size: 95px;
+
         }
-        #titulosss{
+
+        #titulosss {
             margin-top: 30px;
             margin-left: 30px;
             font-weight: bold;
@@ -171,223 +218,332 @@
             color: rgb(0, 0, 0);
             text-align: left;
         }
-        
-        #subtitulo{
-            font-family: 'Inter Regular', Arial, sans-serif; 
+
+        #subtitulo {
+            font-family: 'Inter Regular', Arial, sans-serif;
             font-size: 22px;
             color: rgba(230, 230, 230, 0.808);
-            
+
         }
-        #subtituloss{
+
+        #subtituloss {
             font-weight: bold;
-            font-family: 'Inter Regular', Arial, sans-serif; 
+            font-family: 'Inter Regular', Arial, sans-serif;
             font-size: 30px;
             color: rgba(43, 42, 42, 0.726);
-            
+
         }
-        #subtitulosss{
-            
-            font-family: 'Inter Regular', Arial, sans-serif; 
+
+        #subtitulosss {
+
+            font-family: 'Inter Regular', Arial, sans-serif;
             font-size: 20px;
             color: rgba(43, 42, 42, 0.726);
             text-align: left;
             margin-left: 30px;
-            
+
         }
-        #btncursos{
-            font-family: 'Inter Regular', Arial, sans-serif; 
-    color: rgb(0, 0, 0); /* Color del texto */
-    border: none;
-    border-radius: 20px; /* Bordes redondeados */
-    padding: 15px 80px;
-    cursor: pointer;
-    background-color: #09A4AB;
-    
+
+        #btncursos {
+            font-family: 'Inter Regular', Arial, sans-serif;
+            color: rgb(0, 0, 0);
+            /* Color del texto */
+            border: none;
+            border-radius: 20px;
+            /* Bordes redondeados */
+            padding: 15px 80px;
+            cursor: pointer;
+            background-color: #09A4AB;
+
         }
-        #imagenp{
-            border-radius: 10px; /* Bordes redondeados para la imagen */
-    max-width: 90%; /* Mantener el ancho máximo de la imagen */
-    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la relación de aspecto */
-    max-height: 70vh;/* Establecer la altura de la imagen en 150 píxeles */
+
+        #imagenp {
+            border-radius: 10px;
+            /* Bordes redondeados para la imagen */
+            max-width: 90%;
+            /* Mantener el ancho máximo de la imagen */
+            height: auto;
+            /* Permitir que la altura se ajuste automáticamente para mantener la relación de aspecto */
+            max-height: 70vh;
+            /* Establecer la altura de la imagen en 150 píxeles */
         }
-      
-   
-    
-    .register-link span {
-    margin-right: 5px;
-    color: white; /* Cambia el color del texto a blanco */
-}
-.register-link a {
-    color: gray; /* Cambia el color del texto a gris */
-}
-.register-link label {
-    color: white; /* Cambia el color del texto a blanco */
-}
-.objetivo {
-    display: flex; /* Hace que los elementos estén en línea */
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.objetivo-info {
-    margin-left: 50px;
-    font-size: 16px;
-    
-    flex: 1; /* Utiliza todo el espacio restante */
-}
-.objetivo-numero {
-    flex:  0 0 auto; /* Utiliza todo el espacio restante */
-    margin-left: 200px; /* Despega el texto de la parte derecha 20 píxeles */
-    font-weight: bold; /* Texto en negrita */
-    color: #fff;
-    font-size: 60px;
-    text-align: left;
-    line-height: 50px; /* Alinea verticalmente el número de objetivo */
-    display: flex;
-    margin-bottom: 80px;
-}
-.linea {
-    position: relative; /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
-    margin: 20px 0; /* Margen de 20 píxeles arriba y abajo para separar la línea de los elementos adyacentes */
-    height: 1px; /* Grosor de la línea */
-    background-color: #cccccc00; /* Color de la línea */
-    overflow: hidden; /* Oculta el contenido que exceda el tamaño del contenedor */
-}
-
-.linea::after {
-    content: ''; /* Contenido del pseudo-elemento, en este caso, una línea */
-    position: absolute; /* Establece la posición absoluta para que se posicione con respecto al elemento padre */
-    top: 0; /* Posiciona el pseudo-elemento en la parte superior del contenedor */
-    left: 50%; /* Posiciona el pseudo-elemento en el centro horizontal */
-    transform: translateX(-50%); /* Centra el pseudo-elemento horizontalmente */
-    width: 80%; /* Anchura del pseudo-elemento, igual al 100% del contenedor */
-    height: 1px; /* Grosor de la línea */
-    background-color: #ffffff; /* Color de la línea */
-}
-.content {
-    text-align: center;
-}
-.circle-image {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.705);
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    display: flex;
-    margin-left: auto; /* Centra el contenedor en el lado izquierdo */
-    margin-right: auto;  /* Centra verticalmente */
-    /* Agrega tu imagen como fondo */
-    background-image: url(comunidad-virtual.png); /* Ruta a tu imagen */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área */
-    background-position: right; /* Centra la imagen dentro del contenedor */
-    
-
-}       
-
-
-.text {
-    margin-top: 20px;
-}
-
-.button {
-    box-shadow: 0px 0px 30px #000000c2;
-    font-weight: bold;
-    font-size: 20px;
-    display: inline-block;
-    padding: 10px 50px;
-    background-color: #008A90;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-
-footer {
-    background-color: #222831;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left img {
-    width: 50px;
-    cursor: pointer;
-}
-
-.footer-center label {
-    margin: 0 10px;
-}
-.footer-center a {
-    text-decoration: none;
-     /* Color de fondo de los botones y labels */
-    color: white; /* Color del texto de los botones y labels */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    
-}
-.footer-center a:hover {
-    color: #16a18f; /* Cambio de color al pasar el cursor */
-}
-.footer-right img {
-    width: 30px;
-    margin-left: 10px;
-}
-.social-icon {
-    width: 30px; /* Tamaño de las imágenes */
-    height: 30px; /* Tamaño de las imágenes */
-    margin-left: 10px; /* Espacio entre las imágenes */
-}
 
 
 
-.fila {
-  display: flex;
-  flex-basis: 48%; /* Para dejar un pequeño espacio entre los contenedores */
-}
+        .register-link span {
+            margin-right: 5px;
+            color: white;
+            /* Cambia el color del texto a blanco */
+        }
 
-.contenedor-pequeno {
-    box-shadow: 0px 0px 30px #000;
-    color: #ffffff;
-    background-color: #1a201f;
-  flex-basis: 100%; /* Tamaño de cada contenedor pequeño */
-  border-radius: 16px; /* Bordes redondeados */
-   /* Borde gris */
-  padding: 10px; /* Espacio interno */
-  margin-bottom: 20px; /* Espacio entre filas */
-  margin-right: 15px; 
-}
+        .register-link a {
+            color: gray;
+            /* Cambia el color del texto a gris */
+        }
 
-.contenedor-pequeno img {
-    border-radius: 16px;
-    /* Para que la imagen se superponga al contenido */
- width: 100%;
-  /* La imagen ocupa todo el espacio disponible */
-   /* La imagen se ajusta para cubrir todo el contenedor */
-}
+        .register-link label {
+            color: white;
+            /* Cambia el color del texto a blanco */
+        }
 
-.contenedor-pequeno p {
-  margin-bottom: 10px; /* Espacio entre el párrafo y el enlace */
-  
-}
-.inner-container2 a {
+        .objetivo {
+            display: flex;
+            /* Hace que los elementos estén en línea */
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .objetivo-info {
+            margin-left: 50px;
+            font-size: 16px;
+
+            flex: 1;
+            /* Utiliza todo el espacio restante */
+        }
+
+        .objetivo-numero {
+            flex: 0 0 auto;
+            /* Utiliza todo el espacio restante */
+            margin-left: 200px;
+            /* Despega el texto de la parte derecha 20 píxeles */
+            font-weight: bold;
+            /* Texto en negrita */
+            color: #fff;
+            font-size: 60px;
+            text-align: left;
+            line-height: 50px;
+            /* Alinea verticalmente el número de objetivo */
+            display: flex;
+            margin-bottom: 80px;
+        }
+
+        .linea {
+            position: relative;
+            /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
+            margin: 20px 0;
+            /* Margen de 20 píxeles arriba y abajo para separar la línea de los elementos adyacentes */
+            height: 1px;
+            /* Grosor de la línea */
+            background-color: #cccccc00;
+            /* Color de la línea */
+            overflow: hidden;
+            /* Oculta el contenido que exceda el tamaño del contenedor */
+        }
+
+        .linea::after {
+            content: '';
+            /* Contenido del pseudo-elemento, en este caso, una línea */
+            position: absolute;
+            /* Establece la posición absoluta para que se posicione con respecto al elemento padre */
+            top: 0;
+            /* Posiciona el pseudo-elemento en la parte superior del contenedor */
+            left: 50%;
+            /* Posiciona el pseudo-elemento en el centro horizontal */
+            transform: translateX(-50%);
+            /* Centra el pseudo-elemento horizontalmente */
+            width: 80%;
+            /* Anchura del pseudo-elemento, igual al 100% del contenedor */
+            height: 1px;
+            /* Grosor de la línea */
+            background-color: #ffffff;
+            /* Color de la línea */
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .circle-image {
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.705);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            margin-left: auto;
+            /* Centra el contenedor en el lado izquierdo */
+            margin-right: auto;
+            /* Centra verticalmente */
+            /* Agrega tu imagen como fondo */
+            background-image: url(comunidad-virtual.png);
+            /* Ruta a tu imagen */
+            background-size: cover;
+            /* Ajusta el tamaño de la imagen para cubrir el área */
+            background-position: right;
+            /* Centra la imagen dentro del contenedor */
+
+
+        }
+
+
+        .text {
+            margin-top: 20px;
+        }
+
+        .button {
+            box-shadow: 0px 0px 30px #000000c2;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            padding: 10px 50px;
+            background-color: #008A90;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+
+        footer {
+            background-color: #222831;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left img {
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .footer-center label {
+            margin: 0 10px;
+        }
+
+        .header a {
+            text-decoration: none;
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 5px 1px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .header a:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .header label {
+            margin: 0 10px;
+        }
+
+        .footer-center a {
+            text-decoration: none;
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .footer-center a:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .footer-right img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .social-icon {
+            width: 30px;
+            /* Tamaño de las imágenes */
+            height: 30px;
+            /* Tamaño de las imágenes */
+            margin-left: 10px;
+            /* Espacio entre las imágenes */
+        }
+
+
+
+        .fila {
+            display: flex;
+            flex-basis: 48%;
+            /* Para dejar un pequeño espacio entre los contenedores */
+        }
+
+        .contenedor-pequeno {
+            box-shadow: 0px 0px 30px #000;
+            color: #ffffff;
+            background-color: #1a201f;
+            flex-basis: calc(25% - 35px);
+            /* Tamaño de cada contenedor pequeño */
+            border-radius: 16px;
+            /* Bordes redondeados */
+            /* Borde gris */
+            padding: 10px;
+            /* Espacio interno */
+            margin-bottom: 20px;
+            /* Espacio entre filas */
+            margin-right: 15px;
+            box-sizing: border-box;
+            /* Incluir el padding en el tamaño total */
+            overflow: hidden;
+            /* Ocultar contenido que se desborde */
+        }
+
+        /* Estilo para la imagen dentro de los contenedores */
+        .contenedor-pequeno img {
+            width: 100%;
+            /* Ajustar la imagen al ancho del contenedor */
+            height: auto;
+            /* Mantener la proporción */
+            border-radius: 10px;
+            /* Bordes redondeados para la imagen */
+        }
+
+
+        .contenedor-pequeno p {
+            margin-bottom: 10px;
+            /* Espacio entre el párrafo y el enlace */
+
+        }
+
+
+        .contenedor-pequeno a {
+            /* Color de fondo de los botones y labels */
+            color: white;
+            /* Color del texto de los botones y labels */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .contenedor-pequeno a:hover {
+            color: #16a18f;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .inner-container2 a {
             text-decoration: none;
             box-shadow: 0px 0px 30px #000000a2;
             border-radius: 4px;
             margin: 5px;
             padding: 15px 40px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-                .inner-container2 a:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
-        .inner-container a:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
+
+        .inner-container2 a:nth-child(2) {
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
         }
+
+        .inner-container a:hover {
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
+        }
+
         .container a {
             text-decoration: none;
             box-shadow: 0px 0px 30px #000000a2;
@@ -395,20 +551,25 @@ footer {
             margin: 5px;
             padding: 15px 60px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-                .container a:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
+
+        .container a:nth-child(2) {
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
+        }
+
         .container a:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
         }
 
 
-        
+
 
         .contenedor-pequeno a {
             text-decoration: none;
@@ -417,121 +578,140 @@ footer {
             margin: 5px;
             padding: 8px 12px;
             border: none;
-            background-color: #09A4AB; /* Color verde */
+            background-color: #09A4AB;
+            /* Color verde */
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-                .contenedor-pequeno a:nth-child(2) {
-    margin-left: 10px; /* Ajusta el espacio entre los botones */
-}
-        .contenedor-pequeno a:hover {
-            background-color: #222831; /* Cambio de color al pasar el cursor */
-        }
-        .btn-like {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
-    background-image: url('corazon prueba1.png'); /* Imagen de corazón */
-    background-size: cover;
-    cursor: pointer;
-    outline: none;
-}
 
-/* Estilo para el botón cuando está "gustado" */
-.btn-like.liked {
-    background-image: url('corazon prueba3.png'); /* Imagen de corazón "gustado" */
-}
+        .contenedor-pequeno a:nth-child(2) {
+            margin-left: 10px;
+            /* Ajusta el espacio entre los botones */
+        }
+
+        .contenedor-pequeno a:hover {
+            background-color: #222831;
+            /* Cambio de color al pasar el cursor */
+        }
+
+        .btn-like {
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+            background-image: url('corazon prueba1.png');
+            /* Imagen de corazón */
+            background-size: cover;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Estilo para el botón cuando está "gustado" */
+        .btn-like.liked {
+            background-image: url('corazon prueba3.png');
+            /* Imagen de corazón "gustado" */
+        }
     </style>
 </head>
+
 <body>
     <div class="header">
-        
-        <label for="">Cursos</label>
-        <label for="">Developers</label>
-        <a href="paginainiciodesesion.html" class="boton">Iniciar Sesión</a>
-    <a href="paginacrearcuenta.html" class="boton">Registrarse</a>
-        
+
+        <label><a href="comofunciona.html">Como Funciona</a></label>
+        <label><a href="https://www.linkedin.com/in/axel-geronimo-833898244/">Developer</a></label>
+        <button id="btnInicioSesion"></button>
+
     </div>
-    
+
     <div class="container light-img">
-        
+
         <div class="inner-container2">
             <p id="titulosss">Explora Nuevos<br>Cursos</p>
             <p id="subtitulosss">Amplíe sus conocimientos en línea</p><br><br>
             <a href="paginacursos.html" class="boton">Comienza a aprender</a>
-   
+
         </div>
 
     </div>
     <div class="container light-black">
         <p id="titulo">Cursos Populares</p>
-            <div class="fila">
-              <div class="contenedor-pequeno">
-                <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-              <div class="contenedor-pequeno">
-                <img src="Curso-para-construir-una-startup-300x159.jpg" alt="Imagen 2">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-              <div class="contenedor-pequeno">
-                <img src="imagen3.jpg" alt="Imagen 3">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-              <div class="contenedor-pequeno">
-                <img src="imagen4.jpg" alt="Imagen 4">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
+        <div id="contenedor-pequeno">
+            <div id="coursesContainer" class="courses-wrapper">
+
+
+
+                <div class="contenedor-pequeno" data-tags="12 meses,ingles">
+                    <img src="ingles-en-12-meses-300x180.jpg" alt="Imagen 1">
+                    <p>curso de ingles en 12 meses</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador('clicks')" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+
+
+                </div>
+                <div class="contenedor-pequeno" data-tags="programación,ingles">
+                    <img src="Curso-para-construir-una-startup-300x159.jpg" alt="Imagen 2">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador('click(2)')" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+                </div>
+                <div class="contenedor-pequeno" data-tags="programación,java">
+                    <img src="curso-italiano-certificado-gobierno-italia-300x159.jpg" alt="Imagen 3">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador('click(3)')" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+                </div>
+                <div class="contenedor-pequeno" data-tags="programación,java">
+                    <img src="Curso-de-DeepRacer-para-AWS-1-300x159.jpg" alt="Imagen 4">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador('click(4)')" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+                </div>
+
+
+                <div class="contenedor-pequeno" data-tags="programación,java">
+                    <img src="Curso-de-Duet-AI-para-presentaciones-de-Google-1-300x159.jpg" alt="Imagen 5">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador('click(5)')" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+                </div>
+                <div class="contenedor-pequeno" data-tags="programación,java">
+                    <img src="Curso-para-aprender-Power-Bi-1-300x159.jpg" alt="Imagen 6">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador('click(6)')" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+                </div>
+                <div class="contenedor-pequeno" data-tags="programación,ingles">
+                    <img src="Curso-sobre-emprendimiento-social-1-300x159.jpg" alt="Imagen 7">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador()" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+                </div>
+                <div class="contenedor-pequeno" data-tags="programación,ingles">
+                    <img src="Curso-para-ser-analista-de-datos-300x159.jpg" alt="Imagen 8">
+                    <p>Información breve sobre algo</p>
+                    <button id="botonlike" onclick="guardar(),actualizarContador()" class="btn-like"></button>
+                    <label><a href="Index.html">Leer más</a></label>
+
+
+                </div>
+
             </div>
-            <div class="fila">
-              <div class="contenedor-pequeno">
-                <img src="imagen5.jpg" alt="Imagen 5">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-              <div class="contenedor-pequeno">
-                <img src="imagen6.jpg" alt="Imagen 6">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-              <div class="contenedor-pequeno">
-                <img src="imagen7.jpg" alt="Imagen 7">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-              <div class="contenedor-pequeno">
-                <img src="imagen8.jpg" alt="Imagen 8">
-                <p>Información breve sobre algo</p>
-                <button class="btn-like"></button>
-                <label><a href="Index.html">Leer más</a></label>
-              </div>
-            </div>
-          
-        
+
+
+        </div>
+    </div>
     </div>
 
     <div class="container light-black">
-        
-            
-        
-            
-        
-        
 
-    
+
+
+
+
+
+
+
     </div>
 
 
@@ -539,23 +719,23 @@ footer {
 
     <div class="container light-black">
         <div class="circle-image">
-            
+
         </div>
         <div class="text">
             <h2 id="titulo">Únete a nuestra comunidad</h2>
             <p id="subtitulo">Conéctese con los estudiantes y crezcamos juntos.</p>
-            <a href="#" class="button">Únete Hoy!</a>
+            <a href="https://chat.whatsapp.com/LFmMqWWwi5R4hz0UGXzWUs" class="button">Únete Hoy!</a>
         </div>
-        
+
     </div>
-    
+
     <footer>
         <div class="footer-left">
             <img src="2269.png" alt="Calificar" onclick="alert('Por favor, califique del 1 al 10.')">
         </div>
         <div class="footer-center">
-            <label><a href="Index.html">Como Funciona</a></label>
-            <label><a href="Index.html">Developers</a></label>
+            <label><a href="comofunciona.html">Como Funciona</a></label>
+            <label><a href="https://www.linkedin.com/in/axel-geronimo-833898244/">Developers</a></label>
         </div>
         <div class="footer-right">
             <a href="#"><img src="linkedin.png" alt="LinkedIn" class="social-icon"></a>
@@ -563,7 +743,16 @@ footer {
         </div>
     </footer>
     <script src="likear.js"></script>
-        <script src="guardarboton.js"></script>
-</body>
-</html>
+    <script src="guardarboton.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="tore.js"></script>
+    <script type="module" src="farebase.js"></script>
+    <script type="module" src="barradebusqueda.js"></script>
 
+    <script type="module" src="cambiarbotones.js"></script>
+    <script type="module" src="btnlogaut.js"></script>
+</body>
+
+</html>
